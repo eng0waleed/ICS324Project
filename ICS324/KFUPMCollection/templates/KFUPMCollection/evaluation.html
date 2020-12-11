@@ -1,0 +1,71 @@
+{% extends "KFUPMCollection/base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<!--Page Content-->
+<script>
+function instructor(clicked_id) {
+    location.href = "instructor?depID=" + clicked_id;
+}
+
+</script>
+
+<div class="middle">
+    <table class="container">
+        <tr>
+            <td colspan="3">
+                <div class="info">
+        </tr>
+
+        <tr>
+
+            <td class="standard flip">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Voice</h3>
+
+                    </div>
+            </td>
+            <td class="standard flip">
+                <div class="card-inner">
+
+                    <div class="card-front">
+                        <h3>Explaining</h3>
+                    </div>
+
+            </td>
+            <td class="standard flip">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Quizes</h3>
+                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <h3>Final Grade</h3>
+                
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="comments">
+                <h3>comments</h3></br>
+
+
+            </td>
+        </tr>
+        <tr>
+            
+        </tr>
+
+    </table>
+    <script type="text/javascript">
+        function form(click) {
+            location.href = "EvaluationForm.php?insID=" + click;
+        }
+    </script>
+
+</div>
+{% endblock content %}

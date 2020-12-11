@@ -1,0 +1,27 @@
+{% extends "KFUPMCollection/base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <!--Page content-->
+    <script>
+        function evaluation(clicked_id) {
+                location.href = "evaluation?insID=" + clicked_id;
+            }
+    </script>
+    <div class="middle">
+        {% for i in instructors %}
+        <div class="container">
+            <button class="bg1" id= '{{i.IID}}' onClick='evaluation(this.id)'>  
+               
+                <div class="bg1 ">
+                    <p class="course">{{ i.Name }}</p>
+                </div>
+                {% endfor %}
+            </button>
+        </div>
+           
+    </div>
+
+
+    {% endblock content %}

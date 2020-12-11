@@ -32,7 +32,7 @@
             <h2><i class="{{ i.icon }}"></i></h2>
             <p class="course">{{ i.name }}</p>
             <button class='button' id='{{ i.id }}' onClick='resources(this.id)'>Resources</button>
-            <button class="button">Instructors Evaluation</button>
+            <button class="button" id='{{ i.id }}' onClick='evaluation(this.id)'>Instructors Evaluation</button>
         </div>
         <!-- display departments -->
         {% endfor %}

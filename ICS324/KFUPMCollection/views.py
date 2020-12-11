@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import departments, course
+from .models import departments, course, instructor
 
 
 def home(request):
@@ -17,6 +17,16 @@ def courses(request):
          'depID': request.GET.get('depID')
     }
     return render(request, 'KFUPMCollection/courses.html', context)
+
+def instructors(request):
+    context = {
+        'instructors': instructor.objects.all()
+    }
+    return render(request, 'KFUPMCollection/instructors.html', context)
+
+def evaluation(request):
+    
+    return render(request, 'KFUPMCollection/evaluation.html')
 
 
 def about(request):
